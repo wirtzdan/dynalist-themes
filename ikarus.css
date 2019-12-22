@@ -1,0 +1,413 @@
+/*----- App Header -----*/
+
+.AppHeader {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    background-color: #506578;
+    color: white;
+}
+
+.AppHeader-icon {
+    color: white;
+    border-radius: 2px;
+    padding: 7px;
+    top: 6px;
+}
+
+.AppHeader-icon:hover {
+    box-shadow: None;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.AppHeader-syncStatus {
+    bottom: 10px;
+    right: 115px;
+}
+
+.AppHeader-notifications {
+    right: 74px;
+}
+
+.AppHeader-settings {
+    right: 40px;
+}
+
+/*----- Drawer Icons -----*/
+
+.pane-item-icon {
+    vertical-align: -4px;
+    font-size: 20px;
+}
+
+.FolderItem-icon:before {
+    content: "\e90c";
+    color: rgb(164, 164, 164);
+}
+
+.DocumentItem-icon:before {
+    content: "\e90d";
+    color: rgb(184, 184, 184);
+}
+
+.pane-item-children {
+    padding-left: 20px;
+}
+
+.pane-item-title {
+    line-height: 26px;
+}
+
+.Pane-content {
+    padding-top: 0;
+}
+
+.Pane-content>div {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.pane-item-header.is-collapsed .pane-item-toggler:before {
+    content: "\e94a";
+}
+
+.pane-item-header:not(.is-collapsed) .pane-item-toggler:before {
+    content: "\e926";
+    writing-mode: vertical-lr;
+}
+
+/*----- Desktop-specific tweaks -----*/
+
+.is-desktop .AppHeader {
+    height: 44px;
+}
+
+.is-desktop .LeftPaneSlidebarContainer {
+    box-shadow: None;
+}
+
+.is-desktop .LeftPaneSplitter:after {
+    border-right: None;
+}
+
+.is-desktop .LeftPaneContainer {
+    border-right: 1px solid #f1f1f1;
+}
+
+.is-desktop .LeftPaneContainer,
+.is-desktop .Pane {
+    background-color: #fafafa;
+}
+
+@media screen and (min-width: 510px) {
+
+    .Pane-header,
+    .Pane-headerToolbar,
+    .Pane-headerToolbarItem,
+    .Pane-headerToolbarItem:before {
+        height: 35px;
+        line-height: 35px;
+    }
+
+    .Pane-header,
+    .LeftPaneContainer-navItem>.tooltip {
+        border-bottom: 1px solid #f1f1f1;
+    }
+}
+
+.is-desktop .LeftPaneContainer-nav,
+.is-desktop .LeftPaneContainer-navItem {
+    width: 35px;
+}
+
+.is-desktop .LeftPaneContainer-panes {
+    width: calc(100% - 35px);
+}
+
+.is-desktop .LeftPaneContainer-navItem {
+    height: 35px;
+}
+
+.is-desktop .LeftPaneContainer-nav {
+    padding-top: 0;
+    border-right: 1px solid #f1f1f1;
+}
+
+.is-desktop .LeftPaneSlidebarContainer {
+    z-index: 1;
+}
+
+@media screen and (min-width: 510px) {
+    .DocumentContainer {
+        left: 0 !important;
+        width: 100% !important;
+    }
+}
+
+/* ----- Mobile specific tweaks ----- */
+
+.MobileHeader-option,
+.MobileHeader-option--toggleReadMode.is-in-read-mode:before {
+    color: white;
+}
+
+.MobileHeader-mainMenuIcon,
+.MobileHeader-backIcon,
+.MobileHeader-option,
+.MobileHeader-title {
+    color: white;
+}
+
+.is-mobile .Node.is-currentRoot {
+    padding: 0 15px 0 15px;
+}
+
+.is-mobile .Node-children {
+    padding-left: 0;
+}
+
+.is-mobile .node-line {
+    padding-right: 5px;
+}
+
+/* .is-mobile .DocumentBreadcrumb {
+    padding-top: 0;
+} */
+
+/* align buttons to expand/collapse closer to the edge */
+.is-mobile .node-hover {
+    margin-right: 0;
+    right: 6px;
+    /* width: 100%; */
+}
+
+/* ----- Mobile specific tweaks - Nav panel ----- */
+
+.is-mobile .LeftPaneContainer-header,
+.is-mobile .LeftPaneContainer-nav {
+    background-color: #506578;
+}
+
+.is-mobile .LeftPaneContainer-header {
+    padding: 10px 0 5px 0;
+}
+
+.is-mobile .LeftPaneSlidebarContainer.is-open .LeftPaneContainer-nav {
+    box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.15);
+}
+
+.is-mobile .LeftPaneContainer-navItem {
+    border-bottom-color: #506578;
+}
+
+.is-mobile .Pane-headerButtonContainer {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.is-mobile .Pane-headerIcon--documentFinder:before {
+    position: relative;
+    top: -2px;
+    vertical-align: middle;
+    font-size: 20px;
+}
+
+.is-mobile .Pane-content {
+    padding-top: 0;
+}
+
+.is-mobile .pane-item-children {
+    padding-left: 25px;
+}
+
+.is-mobile .pane-item-icon {
+    vertical-align: -3px;
+}
+
+
+.is-mobile .pane-item-toggler {
+    vertical-align: -1px;
+}
+
+.is-mobile .pane-item-header {
+    padding: 5px 5px 6px 50px;
+}
+
+/*----- Content Nodes - Bullets (Similiar to Workflowy) -----*/
+
+.Node.is-currentRoot>.Node-self .node-line,
+.Node.is-currentRoot>.Node-self.is-heading .node-line,
+.Node.is-currentRoot>.Node-self .node-line-strict,
+.Node.is-currentRoot>.Node-self.is-heading .node-line-strict {
+    font-weight: 600;
+    font-size: 128%;
+}
+
+.Node-self.is-collapsed.is-parent>.Node-bullet:before {
+    content: "\e90d";
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    color: #666;
+}
+
+.AppContainer.is-using-bullet-to-zoom .Node-bullet:before {
+    background-color: transparent;
+    color: #666;
+}
+
+.AppContainer.is-using-bullet-to-zoom .Node-bullet:hover:before {
+    background-color: #aaa;
+}
+
+.Node-self.is-collapsed.is-parent>.Node-bullet:hover:before {
+    content: "\e90d";
+    background-color: #aaa;
+}
+
+.Node-self.is-collapsed>.Node-bullet:hover:before {
+    content: "\e90a";
+    background-color: #aaa;
+}
+
+.Node-bullet:before {
+    font-size: 18.5px;
+}
+
+.node-inline-item {
+    background-color: #fdfdfd;
+}
+
+#image-preview-loader,
+#image-preview-fail,
+#inline-image-preview,
+.node-inline-item {
+    border: 1px solid #efefef;
+}
+
+.node-icon.mod-bookmark:hover:before,
+.node-icon.mod-bookmark.is-alreadyBookmarked:before {
+    content: "\e929";
+    color: #f4c542;
+}
+
+/*----- Breadcrumbs -----*/
+
+.DocumentBreadcrumb-item {
+    color: #484848;
+}
+
+/* ----- Misc ----- */
+
+.FilePane .Pane-headerToolbar {
+    bottom: 0;
+}
+
+.is-desktop .LeftPaneContainer-panes {
+    top: 0;
+}
+
+/* remove empty space at top of document */
+.DocumentBreadcrumb {
+    color: #a9a9a9;
+    padding: 40px 0 0 60px;
+    font-weight: 600;
+}
+
+/* move toolbox out of the document itself; make it stick to the same position */
+.DocumentTools {
+    position: sticky;
+    top: 10px !important;
+    left: 100px;
+}
+
+.DocumentTools-overlay {
+    right: -20px;
+    background: transparent;
+    box-shadow: None;
+}
+
+.DocumentTools-filterView {
+    right: -20px;
+}
+
+.DocumentSearch-icon {
+    right: 16px;
+}
+
+.is-archived>.pane-item-icon {
+    font-size: 16px;
+    vertical-align: -1px;
+}
+
+/*----- Content Nodes - Bottom borders -----*/
+
+/* switch transparent border to padding to avoid gaps between borders for last children */
+.Node {
+    border-top: None;
+    border-bottom: None;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+/* add extra padding to center node text */
+.is-currentRoot>.Node-children>.Node-outer>.Node>.Node-self:not(.is-parent)>.node-line {
+    padding-bottom: 3px;
+}
+
+/* remove borders of last item of .Node-children to avoid stacks of borders with nested lists */
+.Node-children>.Node-outer:last-of-type>.Node>.is-parent.is-collapsed:after,
+.Node-children>.Node-outer:last-of-type>.Node>.is-parent+.Node-children:after {
+    border-bottom: None;
+}
+
+/* ensure all sub-nested lists have their border end at the same bottom level */
+/*.Node-children > .Node-outer:last-of-type > .Node { padding-bottom: 0; }*/
+
+/* adjust left margin to have consistent borders when expanded and collapsed */
+.is-parent+.Node-children:after {
+    width: calc(100% + 10px);
+    margin-left: -10px;
+}
+
+/* adjust padding bottom to have consistent spacing between items when collapsed and epxanded */
+.is-parent.is-collapsed {
+    padding-bottom: 0;
+}
+
+.is-parent.is-collapsed:after {
+    padding-bottom: 3px;
+}
+
+/*----- Content Nodes - Left borders -----*/
+
+/* fix gaps between the border of notes and the children block  */
+.is-mediumFont .Node-self.is-parent+.Node-children {
+    margin-top: -5px;
+}
+
+/* remove transparetn border when menu is open */
+.Node.is-selected .Node-children {
+    border-left: None;
+}
+
+/* convert some padding to margin so the border is aligned with the children block */
+.Node-noteContainer {
+    width: calc(100% - 10px);
+    margin-left: 10px;
+    padding-left: 16px;
+}
+
+/* add border when expanded; adjust padding so it stays consistent with collapsed state */
+.is-parent:not(.is-collapsed)>.Node-noteContainer {
+    border-left: 1px solid #f1f1f1;
+    padding-left: 15px;
+}
+
+/* remove padding so the border of child class .Node-outer is aligned with notes */
+.Node-children {
+    padding-left: 0;
+    border-left: None;
+}
+
+/* add border to .Node-outer, except for first level */
+:not(.is-currentRoot)>.Node-children>.Node-outer {
+    padding-left: 10px;
+    border-left: 1px solid #f1f1f1;
+}
