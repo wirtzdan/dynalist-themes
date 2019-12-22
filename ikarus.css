@@ -411,3 +411,19 @@
     padding-left: 10px;
     border-left: 1px solid #f1f1f1;
 }
+
+/*----- Tags -----*/
+
+.node-tag {
+    color: #878E96;
+    text-decoration: none;
+}
+
+.Node-children .node-tag {
+    color: #CED4DB;
+}
+
+.DocumentContainer.has-tagBackground .node-tag:hover {
+    text-decoration: underline;
+    background: none;
+}
