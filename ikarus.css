@@ -425,5 +425,9 @@
 
 .DocumentContainer.has-tagBackground .node-tag:hover {
     text-decoration: underline;
+
+}
+
+.DocumentContainer.has-tagBackground .node-tag {
     background: none;
 }
